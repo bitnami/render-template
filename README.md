@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/bitnami/render-template.svg?style=svg)](https://circleci.com/gh/bitnami/render-template)
+
 # render-template
 
 This tools allows rendering Handlebars 3.0 templates, using as context data the current environment variables or a provided data file.
