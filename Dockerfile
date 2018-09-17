@@ -8,9 +8,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git make upx \
     && rm -rf /var/lib/apt/lists/*
 
-RUN wget -q -O dep https://github.com/golang/dep/releases/download/v0.4.1/dep-linux-amd64 && \
-    echo '31144e465e52ffbc0035248a10ddea61a09bf28b00784fd3fdd9882c8cbb2315  dep' | sha256sum -c - && \
-        mv dep /usr/bin/ && chmod +x /usr/bin/dep
+RUN wget -q -O dep https://github.com/golang/dep/releases/download/v0.5.0/dep-linux-amd64 && \
+    echo '287b08291e14f1fae8ba44374b26a2b12eb941af3497ed0ca649253e21ba2f83 dep' | sha256sum -c - && \
+    mv dep /usr/bin/ && chmod +x /usr/bin/dep
 
 RUN go get -u \
         github.com/golang/lint/golint \
