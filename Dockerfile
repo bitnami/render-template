@@ -27,7 +27,7 @@ RUN make
 
 RUN upx --ultra-brute out/render-template
 
-FROM bitnami/minideb:jessie
+FROM bitnami/minideb:stretch
 
 COPY --from=build /go/src/app/out/render-template /usr/local/bin/
 
