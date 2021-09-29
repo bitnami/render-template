@@ -2,18 +2,18 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/golang:1.10-stretch
+      - image: circleci/golang:1.16-stretch
 
     working_directory: /go/src/github.com/bitnami/render-template
     steps:
       - checkout
       - run: make get-build-deps
-      - run: make dep-ensure
+      - run: make download
       - run: make vet
       - run: make lint
       - run: make cover
-      - run: make build
-      - run: make build/arm64
+      - run: make build TOOL_PATH=out/render-template
+      - run: make build/arm64 TOOL_PATH=out/arm64/render-template
       - store_artifacts:
           path: /go/src/github.com/bitnami/render-template/out/render-template
           destination: render-template
