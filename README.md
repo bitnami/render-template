@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/bitnami/render-template.svg?style=svg)](https://circleci.com/gh/bitnami/render-template)
+[![CI](https://github.com/bitnami/render-template/actions/workflows/main.yml/badge.svg)](https://github.com/bitnami/render-template/actions/workflows/main.yml)
 
 # render-template
 
