@@ -62,8 +62,5 @@ func (c *RenderTemplateCmd) Execute(args []string) (err error) {
 
 func hasPipedStdin() bool {
 	stat, _ := os.Stdin.Stat()
-	if (stat.Mode() & os.ModeCharDevice) == 0 {
-		return true
-	}
-	return false
+	return (stat.Mode() & os.ModeCharDevice) == 0
 }
