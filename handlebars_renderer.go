@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"io/ioutil"
 
 	"github.com/aymerick/raymond"
 )
@@ -63,7 +62,7 @@ func (h *handlerbarsRenderer) RenderTemplate(in io.Reader, data *templateData) (
 }
 
 func (h *handlerbarsRenderer) parseTemplate(in io.Reader) (*raymond.Template, error) {
-	b, err := ioutil.ReadAll(in)
+	b, err := io.ReadAll(in)
 	if err != nil {
 		return nil, err
 	}
