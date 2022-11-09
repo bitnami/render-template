@@ -8,7 +8,7 @@ TOOL_PATH ?= $(BUILD_DIR)/$(TOOL_NAME)
 
 BUILD_DATE := $(shell date -u '+%Y-%m-%d %I:%M:%S UTC' 2> /dev/null)
 GIT_HASH := $(shell git rev-parse HEAD 2> /dev/null)
-LDFLAGS="'main.buildDate=$(BUILD_DATE)' -X main.commit=$(GIT_HASH) -s -w"
+LDFLAGS="-X 'main.buildDate=$(BUILD_DATE)' -X main.commit=$(GIT_HASH) -s -w"
 
 DEBUG ?= 0
 
