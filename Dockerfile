@@ -2,7 +2,7 @@
 #
 # docker run --rm -i -e WHO=bitnami bitnami/render-template <<<"hello {{WHO}}"
 #
-FROM golang:1.18-bullseye as build
+FROM golang:1.21-bullseye as build
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     git make upx \
