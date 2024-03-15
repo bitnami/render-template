@@ -1,8 +1,9 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/bitnami/render-template)](https://goreportcard.com/report/github.com/bitnami/render-template)
 [![CI](https://github.com/bitnami/render-template/actions/workflows/main.yml/badge.svg)](https://github.com/bitnami/render-template/actions/workflows/main.yml)
 
 # render-template
 
-This tools allows rendering Handlebars 3.0 templates, using as context data the current environment variables or a provided data file.
+This tool allows rendering Handlebars 3.0 templates, using as context data the current environment variables or a provided data file.
 
 # Basic usage
 
@@ -21,13 +22,13 @@ Arguments:
   template-file:               File containing the template to render. Its contents can be also passed through stdin
 ```
 
-The tool supports rendering templates from a file or from stdin (for convenience).
+The tool supports rendering templates from a file or stdin (for convenience).
 
-The source data is taken from the environment variables or from a data file, with properties-file format (key=value, a line for each pair). When a variable is defined both as an environment variable and in the data file, the latter will take precedence.
+The source data is taken from the environment variables or a data file, with properties-file format (key=value, a line for each pair). When a variable is defined both as an environment variable and in the data file, the latter will take precedence.
 
 # Examples
 
-## Render data from template file with environment variables
+## Render data from a template file with environment variables
 
 ```console
 # Create the template
@@ -44,7 +45,7 @@ hello bitnami
 
 ```console
 $ log_file=/tmp/stout.log port=8080 pid_file=/tmp/my.pid render-template <<"EOF"
-# My servide log file
+# My service log file
 log_file "{{log_file}}"
 
 # HTTP port
@@ -93,7 +94,7 @@ EOF
 Outputs:
 
 ```
-# My servide log file
+# My service log file
 log_file "/tmp/stout.log"
 
 # HTTP port
@@ -103,10 +104,10 @@ port 8080
 pid_file "/tmp/my.pid"
 ```
 
-## Overriding environment variables in data file
+## Overriding environment variables in a data file
 
 ```console
-# Lets define some environment variables
+# Let's define some environment variables
 $ export name=foo
 $ export company=bar
 $ export year=3000
@@ -144,7 +145,7 @@ since 2010
 
 ## Using helpers
 
-The tool supports all the standard handlebars helpers: https://handlebarsjs.com/builtin_helpers.html
+The tool supports all the standard handlebar helpers: https://handlebarsjs.com/builtin_helpers.html
 
 ```console
 $ render-template <<"EOF" 
@@ -220,7 +221,7 @@ ARG1="some arg" ARG2="some other \"arg\""
 
 This helper allows using the "or" logical operation over two values (a value will be true if not empty)
 
-To render a block when either "firstName" or "lastName" values ar not empty:
+To render a block when either "firstName" or "lastName" values are not empty:
 
 ```console
 $ cat > data.tpl <<"EOF" 
