@@ -1,6 +1,6 @@
 module github.com/bitnami/render-template
 
-go 1.22
+go 1.24
 
 require (
 	github.com/aymerick/raymond v2.0.2+incompatible
@@ -15,6 +15,6 @@ require (
 	github.com/cesanta/errors v0.0.0-20160612174407-5adec772d663 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	golang.org/x/sys v0.21.0 // indirect
+	golang.org/x/sys v0.33.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
