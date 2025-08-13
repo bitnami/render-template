@@ -1,6 +1,6 @@
 module github.com/bitnami/render-template
 
-go 1.24
+go 1.25
 
 require (
 	github.com/aymerick/raymond v2.0.2+incompatible
