@@ -145,7 +145,7 @@ since 2010
 
 ## Using helpers
 
-The tool supports all the standard handlebar helpers: https://handlebarsjs.com/builtin_helpers.html
+The tool supports all the standard handlebar helpers: https://handlebarsjs.com/api-reference/utilities.html#helper-utilities
 
 ```console
 $ render-template <<"EOF" 
