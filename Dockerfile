@@ -2,7 +2,7 @@
 #
 # docker run --rm -i -e WHO=bitnami bitnami/render-template <<<"hello {{WHO}}"
 #
-FROM bitnami/golang:1.25 as build
+FROM bitnami/golang:1.26 as build
 
 WORKDIR /go/src/app
 COPY . .
